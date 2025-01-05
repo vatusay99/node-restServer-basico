@@ -7,6 +7,7 @@ class Server{
 	constructor(){
 		this.app = express();
 		this.port = process.env.PORT;
+		
 		this.usuariosPath = '/api/usuarios';
 
 		// middlewares
@@ -27,8 +28,9 @@ class Server{
 	}
 
 	listen(){
-		this.app.listen(this.port, function(){
-			console.log(`server iniciado en http://localhost:${this.port}`);
+		console.log(process.env.PORT);
+		this.app.listen(process.env.PORT, function(){
+			console.log(`server iniciado en http://localhost:${process.env.PORT}`);
 		});
 	}
 

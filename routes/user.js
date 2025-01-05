@@ -12,11 +12,11 @@ router.get('/', usuariosGet );
 
 router.put('/:id', putUser);
 
-router.post('/', createUsuario);
+router.post('/create', createUsuario);
 
-router.delete('/', deleteUsuario);
+router.delete('/delete', deleteUsuario);
 
-router.pach('/', editarUsuario);
+router.patch('/edit', editarUsuario);
 
 
 
